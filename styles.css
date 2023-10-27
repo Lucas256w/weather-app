@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+/* GENERAL SETTINGS */
+
+:root {
+    --black: #4E4E4E;
+    --white: #FFFFFF;
+    --light-blue: #69C2F5;
+    --blue: #4a41f2;
+    --shade-white: #FAFAFA;
+    --red: #CC5546;
+    --container-width: 1200px;
+    --border-radius: 6px;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 40px;
+}
+
+body {
+    min-height: 100vh;   
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#header-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    padding: var(--spacing-lg);
+}
+
+#location {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#search-bar-container {
+    display: flex;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1.25rem;
+}
+
+button{
+    margin-left: 5px;
+    border: none;
+    background-color: var(--blue);
+    color: var(--white);
+    height: 32px;
+    border-radius: var(--border-radius);
+}
+
+button:hover{
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+
+/* Main */
+
+/* Current Temperature and Stats */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#temperature-and-stats-container {
+    max-width: var(--container-width);
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+#current-temperature-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#current-weather-icon {
+    height: 200px;
+    width: auto;
+}
+
+#current-temperature-and-subtext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#current-temperature {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+#stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.stat {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Weather by Hour Container */
+
+#weather-by-hour-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#weather-by-hour-cards-container {
+    display: flex;
+}
+
+/* .weather-by-hour-cards{
+    background-color: white;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+} */
