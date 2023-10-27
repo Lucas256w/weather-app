@@ -27,7 +27,7 @@ time, mark, audio, video {
     --black: #4E4E4E;
     --white: #FFFFFF;
     --light-blue: #69C2F5;
-    --blue: #4a41f2;
+    --blue: #182C9E;
     --shade-white: #FAFAFA;
     --red: #CC5546;
     --container-width: 1200px;
@@ -42,8 +42,6 @@ time, mark, audio, video {
 body {
     min-height: 100vh;   
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
     background-color: var(--light-blue);
     color: var(--white);
 }
@@ -99,28 +97,30 @@ button:hover{
 /* Main */
 
 /* Current Temperature and Stats */
-main {
-    flex: 1;
+
+
+#temperature-and-stats-section{
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 #temperature-and-stats-container {
     max-width: var(--container-width);
-    /* width: 100%; */
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-
-#current-temperature-container {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
+#current-temperature-container {
+    flex: 1;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+}
+
 #current-weather-icon {
+    justify-self: end;
     height: 200px;
     width: auto;
 }
@@ -129,7 +129,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    justify-self: start;
 
 }
 
@@ -151,18 +151,112 @@ main {
 
 /* Weather by Hour Container */
 
+#weather-by-hour-section {
+    display: flex;
+    justify-content: center;
+}
+
 #weather-by-hour-container {
+    flex: 1;
+    max-width: var(--container-width);
+    width: auto;
+    align-items: stretch;
+}
+
+#title-and-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#left-btn,
+#right-btn {
+    height: 30px;
+    width: auto;
+}
+
+#left-btn:hover,
+#right-btn:hover {
+    cursor: pointer;
+}
+
+.dots {
+    height: 8px;
+    width: 8px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.dots.active {
+    background-color: var(--white);
+}
+
+#weather-by-hour-cards-container{
+    display: grid;
+    grid-template-columns: repeat(8, minmax(20px, 1fr));
+    column-gap: 10px;
+}
+
+
+.weather-by-hour-cards{
+    border: 3px solid var(--white);
+    /* padding: 5px 20px; */
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.move-btns {
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.card-time,
+.card-temp {
+    font-weight: 600;
+}
+
+/* Next five days container */
+
+#next-five-says-section{
+    margin-top: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+}
+
+#next-five-days-container {
+    max-width: var(--container-width);
+    flex: 1;
     display: flex;
     flex-direction: column;
 }
 
-#weather-by-hour-cards-container {
-    display: flex;
+#next-five-days-cards-container{
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 10px;
 }
 
-/* .weather-by-hour-cards{
-    background-color: white;
-    height: 200px;
-    width: 200px;
-    border: 2px solid black;
-} */
+
+.next-five-days-card {
+    display: flex;
+    border: 3px solid var(--white);
+    border-radius: var(--border-radius);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.next-five-days-weather-icon{
+    height: 2rem;
+    width: auto;
+}
