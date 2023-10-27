@@ -6,7 +6,6 @@ class DisplayStats {
     DisplayStats.updateCurrentTemperature(data);
     DisplayStats.updateCurrentStats(data);
     DisplayStats.updateHourlyCards(data, 0, 8);
-    DisplayStats.updateHourlyCardsBtns(data);
   }
 
   static updateLocationAndTime(data, cityName) {
@@ -81,37 +80,7 @@ class DisplayStats {
     }
   }
 
-  static updateHourlyCardsBtns(data) {
-    const leftBtn = document.querySelector("#left-btn");
-    const rightBtn = document.querySelector("#right-btn");
-    const firstDot = document.querySelector("#first-dot");
-    const secondDot = document.querySelector("#second-dot");
-    const thirdDot = document.querySelector("#third-dot");
-
-    leftBtn.addEventListener("click", () => {
-      if (secondDot.classList.contains("active")) {
-        secondDot.classList.toggle("active");
-        firstDot.classList.toggle("active");
-        DisplayStats.updateHourlyCards(data, 0, 8);
-      } else if (thirdDot.classList.contains("active")) {
-        thirdDot.classList.toggle("active");
-        secondDot.classList.toggle("active");
-        DisplayStats.updateHourlyCards(data, 8, 16);
-      }
-    });
-
-    rightBtn.addEventListener("click", () => {
-      if (secondDot.classList.contains("active")) {
-        secondDot.classList.toggle("active");
-        thirdDot.classList.toggle("active");
-        DisplayStats.updateHourlyCards(data, 16, 24);
-      } else if (firstDot.classList.contains("active")) {
-        firstDot.classList.toggle("active");
-        secondDot.classList.toggle("active");
-        DisplayStats.updateHourlyCards(data, 8, 16);
-      }
-    });
-  }
+  static updateHourlyCardsBtns(data) {}
 }
 
 export default DisplayStats;
