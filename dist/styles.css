@@ -206,6 +206,12 @@ button:hover {
   place-items: center;
 }
 
+.stat-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .stat {
   font-size: 1.5rem;
   font-weight: 600;
