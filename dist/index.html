@@ -3,26 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Weather App</title>
   </head>
   <body>
     <header>
-        <div id="location-and-date-container">
-            <div id="location"></div>
-            <div id="current-date"></div>
+        <div id="header-container">
+            <div id="location-and-date-container">
+                <div id="location">London</div>
+                <div id="current-date">Thursday, October 26</div>
+            </div>
+            <div id="search-bar-container">
+                <input type="text" id="search-bar" placeholder="Location">
+                <button id="confirm-search-btn">Search</button>
+            </div>
+            <button id="metric-toggle"><span class="active-metric">°F</span>/<span>°C</span></button>
         </div>
-        <div id="search-bar-container">
-            <input type="text" id="search-bar" placeholder="Location">
-            <button id="confirm-search-btn">Search</button>
-        </div>
-        <button id="metric-toggle"><span class="active-metric">°F</span>/<span>°C</span></button>
     </header>
     <main>
-
         <div id="temperature-and-stats-container">
             <div id="current-temperature-container">
-                <img src="" id="current-weather-icon">
+                <img src="./Images/Thunderstorm.svg" id="current-weather-icon">
                 <div id="current-temperature-and-subtext">
                     <div id="current-temperature">21°</div>
                     <div id="current-temperature-subtext">Mostly Sunny</div>
@@ -59,31 +65,26 @@
 
         <div id="weather-by-hour-container">
             <div class="titles">Todays Weather</div>
-            <div class="weather-by-hour-cards">
-                <div class="card-time">3am</div>
-                <img class="card-pic" src="">
-                <div class="card-temp"></div>
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
-            </div>
-            <div class="weather-by-hour-cards">
-
+            <div id="weather-by-hour-cards-container">
+                <div class="weather-by-hour-cards">
+                    <div class="card-time">3am</div>
+                    <img class="card-pic" src="">
+                    <div class="card-temp"></div>
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
+                <div class="weather-by-hour-cards">
+                </div>
             </div>
         </div>
 
