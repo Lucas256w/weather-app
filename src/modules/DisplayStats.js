@@ -6,6 +6,7 @@ class DisplayStats {
     DisplayStats.updateCurrentTemperature(data);
     DisplayStats.updateCurrentStats(data);
     DisplayStats.updateHourlyCards(data, 0, 8);
+    DisplayStats.updateFiveDaysCards(data);
   }
 
   static updateLocationAndTime(data, cityName) {
@@ -56,7 +57,7 @@ class DisplayStats {
     );
     container.innerHTML = "";
 
-    for (let i = start; i < end; i++) {
+    for (let i = start; i < end; i += 1) {
       const card = document.createElement("div");
       const cardTime = document.createElement("div");
       const cardPic = document.createElement("img");
@@ -80,7 +81,83 @@ class DisplayStats {
     }
   }
 
-  static updateHourlyCardsBtns(data) {}
+  static updateFiveDaysCards(data) {
+    const container = document.querySelector("#next-five-days-cards-container");
+    container.innerHTML = "";
+
+    for (let i = 1; i < 6; i += 1) {
+      const card = document.createElement("div");
+      const cardDay = document.createElement("div");
+      const dayMain = document.createElement("div");
+      const daySub = document.createElement("div");
+      const img = document.createElement("img");
+      const cardTempLow = document.createElement("div");
+      const lowMain = document.createElement("div");
+      const lowSub = document.createElement("div");
+      const cardTempHigh = document.createElement("div");
+      const highMain = document.createElement("div");
+      const highSub = document.createElement("div");
+      const cardWind = document.createElement("div");
+      const windMain = document.createElement("div");
+      const windSub = document.createElement("div");
+      const cardHumidity = document.createElement("div");
+      const humidityMain = document.createElement("div");
+      const humiditySub = document.createElement("div");
+
+      card.className = "next-five-days-card";
+      img.className = "next-five-days-weather-icon";
+      cardDay.className = "next-five-days-stats";
+      cardTempLow.className = "next-five-days-stats";
+      cardTempHigh.className = "next-five-days-stats";
+      cardWind.className = "next-five-days-stats";
+      cardHumidity.className = "next-five-days-stats";
+
+      img.src = `./images/${data.daily[i].weather[0].main}.svg`;
+
+      dayMain.textContent = UnixTimeConverter.unixTimestampToDateOfWeek(
+        data.daily[i].dt,
+      );
+      daySub.textContent = UnixTimeConverter.unixTimestampToMonthDate(
+        data.daily[i].dt,
+      );
+
+      lowMain.textContent = `${data.daily[i].temp.min}°`;
+      lowSub.textContent = "Low";
+
+      highMain.textContent = `${data.daily[i].temp.max}°`;
+      highSub.textContent = "High";
+
+      windMain.textContent = `${data.daily[i].wind_speed}mph`;
+      windSub.textContent = "Wind";
+
+      humidityMain.textContent = `${data.daily[i].humidity}%`;
+      humiditySub.textContent = "Humidity";
+
+      cardDay.appendChild(dayMain);
+      cardDay.appendChild(daySub);
+
+      cardTempLow.appendChild(lowMain);
+      cardTempLow.appendChild(lowSub);
+
+      cardTempHigh.appendChild(highMain);
+      cardTempHigh.appendChild(highSub);
+
+      cardWind.appendChild(windMain);
+      cardWind.appendChild(windSub);
+
+      cardHumidity.appendChild(humidityMain);
+      cardHumidity.appendChild(humiditySub);
+
+      card.appendChild(cardDay);
+      card.appendChild(img);
+      card.appendChild(cardTempLow);
+      card.appendChild(cardTempHigh);
+      card.appendChild(cardWind);
+      card.appendChild(cardHumidity);
+
+      container.appendChild(card);
+    }
+  }
 }
 
 export default DisplayStats;

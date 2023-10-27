@@ -26,6 +26,24 @@ class UnixTimeConverter {
 
     return timeString;
   }
+
+  static unixTimestampToMonthDate(unixTimestamp) {
+    const date = new Date(unixTimestamp * 1000);
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+
+    return `${month}/${day}`;
+  }
+
+  static unixTimestampToDateOfWeek(unixTimestamp) {
+    const date = new Date(unixTimestamp * 1000); // Correctly converted from seconds to milliseconds
+
+    const options = {
+      weekday: "short",
+    };
+
+    return date.toLocaleDateString("en-US", options);
+  }
 }
 
 export default UnixTimeConverter;
