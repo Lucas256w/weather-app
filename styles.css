@@ -321,6 +321,13 @@ button:hover {
   align-items: center;
 }
 
+.next-five-days-stats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+}
+
 .next-five-days-weather-icon {
   height: 2rem;
   width: auto;
