@@ -3,163 +3,168 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
     <header>
-        <div id="header-container">
-            <div id="location-and-date-container">
-                <div id="location">London</div>
-                <div id="current-date">Thursday, October 26</div>
-            </div>
-            <div id="search-bar-container">
-                <input type="text" id="search-bar" placeholder="Location">
-                <button id="confirm-search-btn">Search</button>
-            </div>
-            <button id="metric-toggle"><span class="active-metric">°F</span>/<span>°C</span></button>
+      <div id="header-container">
+        <div id="location-and-date-container">
+          <div id="location">London</div>
+          <div id="current-date">Thursday, October 26</div>
         </div>
+        <div id="search-bar-container">
+          <input type="text" id="search-bar" placeholder="Location" />
+          <button id="confirm-search-btn">Search</button>
+        </div>
+        <button id="metric-toggle">
+          <span class="active-metric">°F</span>/<span>°C</span>
+        </button>
+      </div>
     </header>
     <main>
-        <div id="temperature-and-stats-section">
-            <div id="temperature-and-stats-container">
-                <div id="current-temperature-container">
-                    <img src="./Images/Thunderstorm.svg" id="current-weather-icon">
-                    <div id="current-temperature-and-subtext">
-                        <div id="current-temperature">21°</div>
-                        <div id="current-temperature-subtext">Mostly Sunny</div>
-                    </div>
-                </div>
-                <div id="stats-container">
-                    <dic class="stat-container">
-                        <div id="high-temp" class="stat">23°</div>
-                        <div class="stat-subtext">High</div>
-                    </dic>
-                    <dic class="stat-container">
-                        <div id="wind" class="stat">7mph</div>
-                        <div class="stat-subtext">Wind</div>
-                    </dic>
-                    <dic class="stat-container">
-                        <div id="sunrise" class="stat">05:27</div>
-                        <div class="stat-subtext">Sunrise</div>
-                    </dic>
-                    <dic class="stat-container">
-                        <div id="low-temp" class="stat">14°</div>
-                        <div class="stat-subtext">Low</div>
-                    </dic>
-                    <dic class="stat-container">
-                        <div id="rain" class="stat">0%</div>
-                        <div class="stat-subtext">Rain</div>
-                    </dic>
-                    <dic class="stat-container">
-                        <div id="sunset" class="stat">20:57</div>
-                        <div class="stat-subtext">Sunset</div>
-                    </dic>
-                </div>
+      <div id="temperature-and-stats-section">
+        <div id="temperature-and-stats-container">
+          <div id="current-temperature-container">
+            <img src="./Images/Thunderstorm.svg" id="current-weather-icon" />
+            <div id="current-temperature-and-subtext">
+              <div id="current-temperature">21°</div>
+              <div id="current-temperature-subtext">Mostly Sunny</div>
             </div>
+          </div>
+          <div id="stats-container">
+            <dic class="stat-container">
+              <div id="high-temp" class="stat">23°</div>
+              <div class="stat-subtext">High</div>
+            </dic>
+            <dic class="stat-container">
+              <div id="wind" class="stat">7mph</div>
+              <div class="stat-subtext">Wind</div>
+            </dic>
+            <dic class="stat-container">
+              <div id="sunrise" class="stat">05:27</div>
+              <div class="stat-subtext">Sunrise</div>
+            </dic>
+            <dic class="stat-container">
+              <div id="low-temp" class="stat">14°</div>
+              <div class="stat-subtext">Low</div>
+            </dic>
+            <dic class="stat-container">
+              <div id="rain" class="stat">0%</div>
+              <div class="stat-subtext">Rain</div>
+            </dic>
+            <dic class="stat-container">
+              <div id="sunset" class="stat">20:57</div>
+              <div class="stat-subtext">Sunset</div>
+            </dic>
+          </div>
         </div>
+      </div>
 
-        <div id="weather-by-hour-section">
-            <div id="weather-by-hour-container">
-                <div id="title-and-nav">
-                    <div class="titles">Todays Weather</div>
-                    <div id="nav">
-                        <img src="./Images/left.svg" id="left-btn">
-                        <div id="first-dot" class="dots active"></div>
-                        <div id="second-dot" class="dots"></div>
-                        <div id="third-dot" class="dots"></div>
-                        <img src="./Images/right.svg" id="right-btn">
-                    </div>
-                </div>
-                <div id="weather-by-hour-cards-container">
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <div class="weather-by-hour-cards">
-                        <div class="card-time">3am</div>
-                        <img class="card-pic" src="./Images/Clouds.svg">
-                        <div class="card-temp">14°</div>
-                    </div>
-                    <!-- <img id="move-right-btn" class="move-btns" src="./Images/right.svg"> -->
-                </div>
+      <div id="weather-by-hour-section">
+        <div id="weather-by-hour-container">
+          <div id="title-and-nav">
+            <div class="titles">Todays Weather</div>
+            <div id="nav">
+              <img src="./Images/left.svg" id="left-btn" />
+              <div id="first-dot" class="dots active"></div>
+              <div id="second-dot" class="dots"></div>
+              <div id="third-dot" class="dots"></div>
+              <img src="./Images/right.svg" id="right-btn" />
             </div>
-        </div>
-
-        <div id="next-five-says-section">
-            <div id="next-five-days-container">
-                <div id="titles">Next 5 days</div>
-                <div id="next-five-days-cards-container">
-                    <div class="next-five-days-card">
-                        <div class="next-five-days-day">
-                            <div class="next-five-days-main">Tue</div>
-                            <div class="next-five-days-sub">30/7</div>
-                        </div>
-                        <img class="next-five-days-weather-icon" src="./Images/Drizzle.svg">
-                        <div class="next-five-days-temp-low">
-                            <div class="next-five-days-main">10</div>
-                            <div class="next-five-days-sub">Low</div>
-                        </div>
-                        <div class="next-five-days-temp-high">
-                            <div class="next-five-days-main">21</div>
-                            <div class="next-five-days-sub">High</div>
-                        </div>
-                        <div class="next-five-days-wind">
-                            <div class="next-five-days-main">12mph</div>
-                            <div class="next-five-days-sub">Wind</div>
-                        </div>
-            
-                        <div class="next-five-days-rain">
-                            <div class="next-five-days-main">Tue</div>
-                            <div class="next-five-days-sub">Tue</div>
-                        </div>
-            
-                    </div>
-                    <div class="next-five-days-card"></div>
-                    <div class="next-five-days-card"></div>
-                    <div class="next-five-days-card"></div>
-                    <div class="next-five-days-card"></div>
-                </div>
+          </div>
+          <div id="weather-by-hour-cards-container">
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
             </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <div class="weather-by-hour-cards">
+              <div class="card-time">3am</div>
+              <img class="card-pic" src="./Images/Clouds.svg" />
+              <div class="card-temp">14°</div>
+            </div>
+            <!-- <img id="move-right-btn" class="move-btns" src="./Images/right.svg"> -->
+          </div>
         </div>
+      </div>
 
+      <div id="next-five-says-section">
+        <div id="next-five-days-container">
+          <div id="titles">Next 5 days</div>
+          <div id="next-five-days-cards-container">
+            <div class="next-five-days-card">
+              <div class="next-five-days-day">
+                <div class="next-five-days-main">Tue</div>
+                <div class="next-five-days-sub">30/7</div>
+              </div>
+              <img
+                class="next-five-days-weather-icon"
+                src="./Images/Drizzle.svg"
+              />
+              <div class="next-five-days-temp-low">
+                <div class="next-five-days-main">10</div>
+                <div class="next-five-days-sub">Low</div>
+              </div>
+              <div class="next-five-days-temp-high">
+                <div class="next-five-days-main">21</div>
+                <div class="next-five-days-sub">High</div>
+              </div>
+              <div class="next-five-days-wind">
+                <div class="next-five-days-main">12mph</div>
+                <div class="next-five-days-sub">Wind</div>
+              </div>
 
+              <div class="next-five-days-rain">
+                <div class="next-five-days-main">Tue</div>
+                <div class="next-five-days-sub">Tue</div>
+              </div>
+            </div>
+            <div class="next-five-days-card"></div>
+            <div class="next-five-days-card"></div>
+            <div class="next-five-days-card"></div>
+            <div class="next-five-days-card"></div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
   </body>

@@ -1,262 +1,321 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-
-
 
 /* GENERAL SETTINGS */
 
 :root {
-    --black: #4E4E4E;
-    --white: #FFFFFF;
-    --light-blue: #69C2F5;
-    --blue: #182C9E;
-    --shade-white: #FAFAFA;
-    --red: #CC5546;
-    --container-width: 1200px;
-    --border-radius: 6px;
-    --spacing-xs: 5px;
-    --spacing-sm: 10px;
-    --spacing-md: 15px;
-    --spacing-lg: 20px;
-    --spacing-xl: 40px;
+  --black: #4e4e4e;
+  --white: #ffffff;
+  --light-blue: #69c2f5;
+  --blue: #182c9e;
+  --shade-white: #fafafa;
+  --red: #cc5546;
+  --container-width: 1200px;
+  --border-radius: 6px;
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
 }
 
 body {
-    min-height: 100vh;   
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--light-blue);
-    color: var(--white);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-blue);
+  color: var(--white);
 }
 
 /* HEADER */
 
 header {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #header-container {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: var(--container-width);
-    padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container-width);
+  padding: var(--spacing-lg);
 }
 
 #location {
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 #search-bar-container {
-    display: flex;
+  display: flex;
 }
 
 input {
-    outline: none;
-    border: none;
-    border-radius: var(--border-radius);
-    font-family: inherit;
-    font-size: 1.25rem;
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-size: 1.25rem;
 }
 
-button{
-    margin-left: 5px;
-    border: none;
-    background-color: var(--blue);
-    color: var(--white);
-    height: 32px;
-    border-radius: var(--border-radius);
+button {
+  margin-left: 5px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  height: 32px;
+  border-radius: var(--border-radius);
 }
 
-button:hover{
-    filter: brightness(90%);
-    cursor: pointer;
+button:hover {
+  filter: brightness(90%);
+  cursor: pointer;
 }
-
 
 /* Main */
 
 /* Current Temperature and Stats */
 
-
-#temperature-and-stats-section{
-    display: flex;
-    justify-content: center;
+#temperature-and-stats-section {
+  display: flex;
+  justify-content: center;
 }
 
 #temperature-and-stats-container {
-    max-width: var(--container-width);
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  max-width: var(--container-width);
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #current-temperature-container {
-    flex: 1;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-
+  flex: 1;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 
 #current-weather-icon {
-    justify-self: end;
-    height: 200px;
-    width: auto;
+  justify-self: end;
+  height: 200px;
+  width: auto;
 }
 
-#current-temperature-and-subtext{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-self: start;
-
+#current-temperature-and-subtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: start;
 }
 
 #current-temperature {
-    font-size: 6rem;
-    font-weight: 500;
+  font-size: 6rem;
+  font-weight: 500;
 }
 
 #stats-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
 }
 
 .stat {
-    font-size: 1.5rem;
-    font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 /* Weather by Hour Container */
 
 #weather-by-hour-section {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #weather-by-hour-container {
-    flex: 1;
-    max-width: var(--container-width);
-    width: auto;
-    align-items: stretch;
+  flex: 1;
+  max-width: var(--container-width);
+  width: auto;
+  align-items: stretch;
 }
 
 #title-and-nav {
-    display: flex;
-    align-items: center;
-    margin-bottom: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
 }
 
 #nav {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 #left-btn,
 #right-btn {
-    height: 30px;
-    width: auto;
+  height: 30px;
+  width: auto;
 }
 
 #left-btn:hover,
 #right-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .dots {
-    height: 8px;
-    width: 8px;
-    border: 2px solid var(--white);
-    border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
 }
 
 .dots.active {
-    background-color: var(--white);
+  background-color: var(--white);
 }
 
-#weather-by-hour-cards-container{
-    display: grid;
-    grid-template-columns: repeat(8, minmax(20px, 1fr));
-    column-gap: 10px;
+#weather-by-hour-cards-container {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(20px, 1fr));
+  column-gap: 10px;
 }
 
-
-.weather-by-hour-cards{
-    border: 3px solid var(--white);
-    /* padding: 5px 20px; */
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.weather-by-hour-cards {
+  border: 3px solid var(--white);
+  /* padding: 5px 20px; */
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .move-btns {
-    height: 50px;
-    width: auto;
-    cursor: pointer;
-    border-radius: 50%;
+  height: 50px;
+  width: auto;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .card-time,
 .card-temp {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /* Next five days container */
 
-#next-five-says-section{
-    margin-top: var(--spacing-md);
-    display: flex;
-    justify-content: center;
+#next-five-says-section {
+  margin-top: var(--spacing-md);
+  display: flex;
+  justify-content: center;
 }
 
 #next-five-days-container {
-    max-width: var(--container-width);
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  max-width: var(--container-width);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-#next-five-days-cards-container{
-    display: grid;
-    grid-template-rows: repeat(5, 1fr);
-    row-gap: 10px;
+#next-five-days-cards-container {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 10px;
 }
-
 
 .next-five-days-card {
-    display: flex;
-    border: 3px solid var(--white);
-    border-radius: var(--border-radius);
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  border: 3px solid var(--white);
+  border-radius: var(--border-radius);
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-
-.next-five-days-weather-icon{
-    height: 2rem;
-    width: auto;
+.next-five-days-weather-icon {
+  height: 2rem;
+  width: auto;
 }
