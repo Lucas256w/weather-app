@@ -6,5 +6,125 @@
     <script src="main.js"></script>
     <title>Weather App</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+        <div id="location-and-date-container">
+            <div id="location"></div>
+            <div id="current-date"></div>
+        </div>
+        <div id="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Location">
+            <button id="confirm-search-btn">Search</button>
+        </div>
+        <button id="metric-toggle"><span class="active-metric">°F</span>/<span>°C</span></button>
+    </header>
+    <main>
+
+        <div id="temperature-and-stats-container">
+            <div id="current-temperature-container">
+                <img src="" id="current-weather-icon">
+                <div id="current-temperature-and-subtext">
+                    <div id="current-temperature">21°</div>
+                    <div id="current-temperature-subtext">Mostly Sunny</div>
+                </div>
+            </div>
+
+            <div id="stats-container">
+                <dic class="stat-container">
+                    <div id="high-temp" class="stat">23°</div>
+                    <div class="stat-subtext">High</div>
+                </dic>
+                <dic class="stat-container">
+                    <div id="wind" class="stat">7mph</div>
+                    <div class="stat-subtext">Wind</div>
+                </dic>
+                <dic class="stat-container">
+                    <div id="sunrise" class="stat">05:27</div>
+                    <div class="stat-subtext">Sunrise</div>                  
+                </dic>
+                <dic class="stat-container">
+                    <div id="low-temp" class="stat">14°</div>
+                    <div class="stat-subtext">Low</div>
+                </dic>
+                <dic class="stat-container">
+                    <div id="rain" class="stat">0%</div>
+                    <div class="stat-subtext">Rain</div>
+                </dic>
+                <dic class="stat-container">
+                    <div id="sunset" class="stat">20:57</div>
+                    <div class="stat-subtext">Sunset</div>
+                </dic>
+            </div>
+        </div>
+
+        <div id="weather-by-hour-container">
+            <div class="titles">Todays Weather</div>
+            <div class="weather-by-hour-cards">
+                <div class="card-time">3am</div>
+                <img class="card-pic" src="">
+                <div class="card-temp"></div>
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+            <div class="weather-by-hour-cards">
+
+            </div>
+        </div>
+
+        <div id="next-five-days-container">
+            <div id="titles">Next 5 days</div>
+            <div id="next-five-days-cards-container">
+                <div class="next-five-days-card">
+                    <div class="next-five-days-day">
+                        <div class="next-five-days-main">Tue</div>
+                        <div class="next-five-days-sub">30/7</div>
+                    </div>
+
+                    <img class="next-five-days-weather-icon" src="">
+
+                    <div class="next-five-days-temp-low">
+                        <div class="next-five-days-main">10</div>
+                        <div class="next-five-days-sub">Low</div>
+                    </div>
+
+                    <div class="next-five-days-temp-high">
+                        <div class="next-five-days-main">21</div>
+                        <div class="next-five-days-sub">High</div>
+                    </div>
+
+                    <div class="next-five-days-wind">
+                        <div class="next-five-days-main">12mph</div>
+                        <div class="next-five-days-sub">Wind</div>
+                    </div>
+                    
+                    <div class="next-five-days-rain">
+                        <div class="next-five-days-main">Tue</div>
+                        <div class="next-five-days-sub">Tue</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer></footer>
+  </body>
 </html>
