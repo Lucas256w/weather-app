@@ -32,7 +32,7 @@ class DisplayStats {
       unit = "C";
     }
 
-    icon.src = `./Images/${data.current.weather[0].main}.svg`;
+    icon.src = `./assets/${data.current.weather[0].main}.svg`;
     currentTemp.textContent = `${Math.round(data.current.temp)}°${unit}`;
     currentTempSubText.textContent = `${data.current.weather[0].main}`;
   }
@@ -107,7 +107,7 @@ class DisplayStats {
       // cardTime.textContent = UnixTimeConverter.unixTimestampToTime(
       //   data.hourly[i].dt,
       // );
-      cardPic.src = `./Images/${data.hourly[i].weather[0].main}.svg`;
+      cardPic.src = `./assets/${data.hourly[i].weather[0].main}.svg`;
       cardTemp.textContent = `${Math.round(data.hourly[i].temp)}${unitTemp}`;
 
       card.appendChild(cardTime);
@@ -159,7 +159,7 @@ class DisplayStats {
       cardWind.className = "next-five-days-stats";
       cardHumidity.className = "next-five-days-stats";
 
-      img.src = `./Images/${data.daily[i].weather[0].main}.svg`;
+      img.src = `./assets/${data.daily[i].weather[0].main}.svg`;
 
       dayMain.textContent = UnixTimeConverter.unixTimestampToDateOfWeek(
         data.daily[i].dt,
