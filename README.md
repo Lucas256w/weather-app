@@ -1,7 +1,5 @@
 # weather-app
 
-# weather-app
-
 ## <a href="https://lucas256w.github.io/weather-app/">Live Demo</a>
 <img width="1440" alt="image" src="https://github.com/Lucas256w/weather-app/assets/112456075/aaec0504-9d2b-4f32-b4fd-61a6cc5ee932">
 <h3>A Weather App made utilizing the OpenWeatherMap One Call API.</h3>
