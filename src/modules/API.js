@@ -20,6 +20,9 @@ class OpenWeatherApi {
           cityName,
           currentMetric,
         );
+      } else {
+        loadingScreen.style.display = "none";
+        alert("Not a Real Place");
       }
     } catch (error) {
       console.log(error);
