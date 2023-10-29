@@ -370,3 +370,10 @@ button:hover {
   height: 2rem;
   width: auto;
 }
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: var(--spacing-sm);
+}
