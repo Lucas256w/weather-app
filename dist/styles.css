@@ -126,6 +126,7 @@ header {
   align-items: center;
   max-width: var(--container-width);
   padding: var(--spacing-lg);
+  padding-top: var(--spacing-sm);
 }
 
 #location {
@@ -143,6 +144,10 @@ input {
   border-radius: var(--border-radius);
   font-family: inherit;
   font-size: 1.25rem;
+}
+
+.active-metric {
+  font-weight: 600;
 }
 
 button {
@@ -193,11 +198,16 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   justify-self: start;
+  align-items: center;
 }
 
 #current-temperature {
   font-size: 6rem;
   font-weight: 500;
+}
+
+#current-temperature-subtext{
+  font-size: 2rem;
 }
 
 #stats-container {

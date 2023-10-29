@@ -44,6 +44,17 @@ class UnixTimeConverter {
 
     return date.toLocaleDateString("en-US", options);
   }
+
+  static unixTimestampToMilitaryTime(unixTimestamp) {
+    const date = new Date(unixTimestamp * 1000); // Correctly converted from seconds to milliseconds
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    return `${String(hours).padStart(2, "0")}:${String(minutes).padStart(
+      2,
+      "0",
+    )}`;
+  }
 }
 
 export default UnixTimeConverter;
