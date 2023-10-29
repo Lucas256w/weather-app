@@ -13,6 +13,7 @@ class OpenWeatherApi {
       );
 
       const coorddata = await response.json();
+      /* eslint-disable no-else-return */
       if (coorddata.length !== 0) {
         OpenWeatherApi.latAndLonToWeather(
           coorddata[0].lat,
@@ -20,9 +21,11 @@ class OpenWeatherApi {
           cityName,
           currentMetric,
         );
+        return true;
       } else {
         loadingScreen.style.display = "none";
         alert("Not a Real Place");
+        return false;
       }
     } catch (error) {
       console.log(error);

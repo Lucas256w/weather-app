@@ -17,15 +17,21 @@ function activateUI() {
   let currentMetric = "imperial";
 
   searchBtn.addEventListener("click", () => {
-    OpenWeatherApi.nameToCoords(input.value, currentMetric);
-    currentCity = input.value;
+    const state = OpenWeatherApi.nameToCoords(input.value, currentMetric);
+    console.log(state);
+    state.then((result) => {
+      if (result === true) {
+        currentCity = input.value;
+        firstDot.className = "dots active";
+        secondDot.className = "dots";
+        thirdDot.className = "dots";
+      }
+    });
     input.value = "";
-    firstDot.className = "dots active";
-    secondDot.className = "dots";
-    thirdDot.className = "dots";
   });
 
   toggleMetric.addEventListener("click", () => {
+    console.log(currentCity);
     if (currentMetric === "imperial") {
       currentMetric = "Metric";
     } else {
