@@ -22,12 +22,12 @@ function activateUI() {
     state.then((result) => {
       if (result === true) {
         currentCity = input.value;
+        input.value = "";
         firstDot.className = "dots active";
         secondDot.className = "dots";
         thirdDot.className = "dots";
       }
     });
-    input.value = "";
   });
 
   toggleMetric.addEventListener("click", () => {
